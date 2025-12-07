@@ -6,6 +6,10 @@ All notable changes to [selection-update](https://github.com/nikku/selection-upd
 
 ___Note:__ Yet to be released changes appear here._
 
+## 1.1.0
+
+* `FEAT`: add type definitions
+
 ## 1.0.0
 
 * `CHORE`: turn into module
