@@ -9,6 +9,7 @@
     "test": "mocha test.js"
   },
   "type": "module",
+  "types": "./index.d.ts",
   "exports": {
     ".": {
       "import": "./index.js"
@@ -41,6 +42,7 @@
     "mocha": "^11.0.1"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ]
 }
