@@ -1,12 +1,16 @@
 /**
+ * @typedef { { start: number, end: number } } SelectionRange
+ */
+
+/**
  * Calculate the selection update for the given
  * current and new input values.
  *
- * @param {Object} currentSelection as {start, end}
- * @param {String} currentValue
- * @param {String} newValue
+ * @param {SelectionRange} currentSelection
+ * @param {string} currentValue
+ * @param {string} newValue
  *
- * @return {Object} newSelection as {start, end}
+ * @return {SelectionRange} newSelection
  */
 export function calculateUpdate(currentSelection, currentValue, newValue) {
 
@@ -41,7 +45,12 @@ export function calculateUpdate(currentSelection, currentValue, newValue) {
   return createRange(newCursor);
 }
 
-
+/**
+ * @param {string} currentValue
+ * @param {string} newValue
+ *
+ * @return { { newStart: number, newEnd: number, type: 'add' | 'remove' } }
+ */
 function createDiff(currentValue, newValue) {
 
   var insert;
@@ -120,10 +129,10 @@ function createDiff(currentValue, newValue) {
 /**
  * Utility method for creating a new selection range {start, end} object.
  *
- * @param {Number} start
- * @param {Number} [end]
+ * @param {number} start
+ * @param {number} [end]
  *
- * @return {Object} selection range as {start, end}
+ * @return {SelectionRange} new range
  */
 export function createRange(start, end) {
   return {
