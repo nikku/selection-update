@@ -2,7 +2,7 @@
   "name": "selection-update",
   "version": "1.1.0",
   "description": "Computing selection updates on external INPUT value changes, browser style",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
     "all": "npm run lint && npm test",
     "lint": "eslint .",
@@ -11,9 +11,7 @@
   "type": "module",
   "types": "./index.d.ts",
   "exports": {
-    ".": {
-      "import": "./index.js"
-    },
+    ".": "./index.js",
     "./package.json": "./package.json"
   },
   "repository": {
